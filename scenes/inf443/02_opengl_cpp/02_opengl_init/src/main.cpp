@@ -12,8 +12,8 @@
 #define GLFW_FALSE 0
 #endif
 
-#include <iostream> 
-
+#include <iostream>
+#include <cmath>
 
 
 GLFWwindow* create_window_using_glfw();
@@ -25,19 +25,31 @@ int main(int, char* argv[])
 	std::cout << "Run " << argv[0] << std::endl;
 
 
-	// Create the window using GLFW
+	// Create the window using GLFW  (keyboards and mouse events)
 	GLFWwindow* window = create_window_using_glfw();
 
 
 	// Display loop
 	std::cout << "\nStart display loop ..." << std::endl;
+    int counter = 0;
 	while (!glfwWindowShouldClose(window)) // loop as long as the window is not closed
 	{
 		// Set here the color used to clear the window at each frame
-		glClearColor(0.8f, 0.6f, 0.5f, 1.0f);
+        // glClearColor(0.8f, 0.6f, 0.5f, 1.0f);
+        counter = (counter+1)%100;
+        float u = counter/99.0f;
+
+        // Set the (R,G,B,A) color to clear the screen
+        glClearColor(0.5+std::cos(2*3.14f*u)/2.0f, 1.0f, 0.5f, 1.0f);
+
 		glClear(GL_COLOR_BUFFER_BIT);
 
+
+
 		glfwSwapBuffers(window);
+        // Fonction de GLFW qui réalise l'échange de buffer pour permettre un double buffering
+        //Le double buffering consiste à stocker 2 buffers (/images de la scène). Pendant que l'une est modifiée,
+        // l'autre est affichée à l'écran. Cela permet d'éviter des clignotements de l'image lors des affichages.
 		glfwPollEvents();
 	}
 

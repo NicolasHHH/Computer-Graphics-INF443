@@ -105,13 +105,13 @@ int main(int, char* argv[])
 		glUseProgram(shader);             // Activate shader program
 		glBindVertexArray(vao);           // Activate attributes for the drawing
 		glDrawArrays(GL_TRIANGLES, 0, 3); // Draw 3 vertices
+        // GL_POINTS, GL_TRIANGLES, GL_LINE_STRIP
 		glBindVertexArray(0);
 		glUseProgram(0);
 
 
-
 		// End of frame
-		glfwSwapBuffers(window);
+		glfwSwapBuffers(window); // double buffer
 		glfwPollEvents();
 	}
 
@@ -131,12 +131,14 @@ GLFWwindow* create_window_using_glfw(int width, int height)
 
 	// Initialize GLFW
 	int const glfw_init_value = glfwInit();
+
 	if (glfw_init_value != GLFW_TRUE) {
 		std::string s = "\nError: Failed to Initialize GLFW.\n";
 		abort();
 	}
 
 	// Set GLFW parameter before creating the window
+    // hint : param name
 	glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_API); // change to GLFW_OPENGL_ES_API for WebGL
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Use only modern OpenGL
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // Expect OpenGL 3.3 or greater
@@ -150,7 +152,8 @@ GLFWwindow* create_window_using_glfw(int width, int height)
 	glfwWindowHint(GLFW_FLOATING, GLFW_FALSE); // Windows is not always on top
 
 #ifdef __APPLE__
-	glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_FALSE); // To avoid HiDPI issues with pixel size on Mac
+	glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_TRUE); // To avoid HiDPI issues with pixel size on Mac
+    // defaut = GLFW_FALSE
 #endif 
 
 
@@ -178,7 +181,7 @@ GLFWwindow* create_window_using_glfw(int width, int height)
 		std::cout << "Failed to Init GLAD" << std::endl;
 		abort();
 	}
-
+    // glViewport(0,0,800,600);
 	// Display debug information on command line
 	std::cout << "\nDebug information on OpenGL version" << std::endl;
 	std::cout << "\t[VENDOR]      : " << glGetString(GL_VENDOR) << std::endl;
