@@ -5,6 +5,7 @@
 
 // Include GLFW
 #include <GLFW/glfw3.h>
+#include <cmath>
 
 // Update GLFW variables for some system
 #ifndef GLFW_TRUE
@@ -34,7 +35,8 @@ int main(int, char* argv[])
 	// ************************************************* //
 	//             1 - Setup/Load the shaders            //
 	// ************************************************* //
-	GLuint shader = opengl_load_shader("shaders/triangle.vert.glsl", "shaders/triangle.frag.glsl");
+	GLuint shader = opengl_load_shader("shaders/triangle.vert.glsl",
+                                       "shaders/triangle.frag.glsl");
 
 	// ************************************************* //
 	//           2 - Prepare and send data to GPU        //
@@ -45,11 +47,35 @@ int main(int, char* argv[])
 	// 2.1 Setup contiguous array of floating point value
 	// ******************************************* //
 	//     Here the coordinates of the vertices position
-	std::vector<GLfloat> position = {
+
+    // pour l'instant, ce n'est qu'un tableau contigu sur le RAM
+    // .resize(), .push_back()
+	std::vector<GLfloat> position1 = {
 		-0.5f, -0.5f, 0.0f,
 		 0.5f, -0.5f, 0.0f,
 		 0.0f,  0.5f, 0.0f
 	};
+    std::vector<GLfloat> position2 = {
+            -1.0f, -1.0f, 0.0f,
+            -1.0f, 1.0f, 0.0f,
+            1.0f, 0.0f, 0.0f
+    };
+    std::vector<GLfloat> position3 = {
+            -0.0f, -0.0f, 2.0f,
+            -1.0f, 1.0f, 0.0f,
+            1.0f, 0.0f, 0.5f
+    };
+
+    std::vector<GLfloat> const position = {
+            -0.5f, -0.5f, 0.0f,
+            0.5f, -0.5f, 0.0f,
+            0.0f,  0.5f, 0.0f,
+
+            0.9f, 0.9f, 0.0f,
+            0.6f, 0.9f, 0.0f,
+            0.6f,  0.6f, 0.0f
+    };
+    // clip coordonnées : [-1,1]
 
 	// 2.2 Create VBO - Send data to GPU
 	// ******************************************* //
@@ -57,10 +83,14 @@ int main(int, char* argv[])
 	GLuint vbo = 0;
 	// Create an empty VBO identifiant
 	glGenBuffers(1, &vbo);
+
 	// Activate the VBO designated by the variable "vbo"
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
+
 	// Send data to GPU: Fill the currently designated VBO with the buffer of data passed as parameter
 	glBufferData(GL_ARRAY_BUFFER, position.size() * sizeof(GLfloat), &position[0], GL_STATIC_DRAW);
+    // glBufferData(GLenum target, GLsizeiptr size, const GLvoid* data, GLenum usage)
+
 	// Good practice to set the current VBO to 0 (=disable VBO) after its use
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -77,12 +107,18 @@ int main(int, char* argv[])
 	glBindBuffer(GL_ARRAY_BUFFER, vbo);
 	// Activate the use of the variable at index layout=0 in the shader
 	glEnableVertexAttribArray(0);
+
 	// Define the memory model of the current VBO: here contiguous triplet of floating values (x y z) at index layout=0 in the shader
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+
+    // Glunit index, GlLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid* pointer
+    // pointer: offset
+    // stride: l'espace entre deux valeurs cosécutives dans le buffer
+    // size: nombre de composants à lire pour chaque sommet
+
 	// As a good practice, disable VBO and VAO after their use
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
-
 
 
 
@@ -91,20 +127,50 @@ int main(int, char* argv[])
 	// ******************************** //
 
 	std::cout << "\nStart display loop ..." << std::endl;
+
+    float t = 0 ;
+    GLint uniform_translation = glGetUniformLocation(shader,"translation");
+    GLint var_color = glGetUniformLocation(shader,"clr");
+    GLint matrix_rotation = glGetUniformLocation(shader,"rotation");
+
+    // renvoie l'adrese de la variable "translation"
 	while (!glfwWindowShouldClose(window)) // loop as long as the window is not closed
 	{
 		// Initialize the frame
 		glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
+        t+=0.05;
+        if (t > 2*3.1416) t=0;
+
+        float tr[3] = {0.9f*std::sin(t), 0.3f*std::cos(t),0.0f}; // pour ensuite être converti en vec3
+        float clr[3] = {abs(std::sin(t))*1.0f, 0.0f,0.0f};
+        float rotation[9] = {
+                std::cos(t), -std::sin(t), 0,
+                std::sin(t), std::cos(t), 0,
+                0,0,1
+        };
 
 		// ************************************************* //
 		//           3 - Displaying Data                     //
 		// ************************************************* //
 
 		glUseProgram(shader);             // Activate shader program
+
 		glBindVertexArray(vao);           // Activate attributes for the drawing
+
+        glUniform3f(uniform_translation,tr[0],tr[1],tr[2]);
+        glUniformMatrix3fv(matrix_rotation,1, GL_TRUE,&rotation[0]);
+        glUniform3f(var_color,clr[1],clr[2],clr[0]);
 		glDrawArrays(GL_TRIANGLES, 0, 3); // Draw 3 vertices
+
+        glUniformMatrix3fv(matrix_rotation,1,GL_FALSE, &rotation[0]);
+        glUniform3f(uniform_translation,0,0,0);
+        glUniform3f(var_color,clr[0],clr[1],clr[2]);
+
+        glDrawArrays(GL_TRIANGLES, 3, 3); // Draw 3 vertices
+
+
         // GL_POINTS, GL_TRIANGLES, GL_LINE_STRIP
 		glBindVertexArray(0);
 		glUseProgram(0);

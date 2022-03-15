@@ -12,17 +12,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="workspace.xml changes">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="TD2 1st part">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/01_basic_cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/01_basic_cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/01_basic_cpp/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/src/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/02_opengl_init/src/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/pgm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/shaders/triangle.frag.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/shaders/triangle.frag.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/shaders/triangle.vert.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/shaders/triangle.vert.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/main.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/note3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/03_triangle/src/note3.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +77,7 @@
       <workItem from="1646695397714" duration="123000" />
       <workItem from="1647259764409" duration="370000" />
       <workItem from="1647283478857" duration="6706000" />
+      <workItem from="1647336423373" duration="6435000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -102,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647260118880</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="TD2 1st part">
+      <created>1647336801240</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647336801240</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TD2 1st part">
+      <created>1647336813979</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647336813979</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +135,8 @@
     <MESSAGE value="first change" />
     <MESSAGE value="cloned from remote, compiled with &quot;make&quot; in local env" />
     <MESSAGE value="workspace.xml changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml changes" />
+    <MESSAGE value="TD2 1st part" />
+    <option name="LAST_COMMIT_MESSAGE" value="TD2 1st part" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
