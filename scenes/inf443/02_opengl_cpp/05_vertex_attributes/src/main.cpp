@@ -54,9 +54,10 @@ int main(int, char* argv[])
 	//     Here the color of the vertices
 	std::vector<GLfloat> color = {
 		1.0f, 0.0f, 0.0, // vertex 0 - red
-		0.0f, 1.0f, 0.0, // vertex 1 - green
+		0.5f, 0.0f, 0.5, // vertex 1 - green
 		0.0f, 0.0f, 1.0  // vertex 2 - blue
 	};
+    // interpolation linéaire
 
 	// 2.2 Create VBO - Send data to GPU
 	// ******************************************* //
@@ -72,6 +73,7 @@ int main(int, char* argv[])
 	GLuint vbo_color = 0;
 	glGenBuffers(1, &vbo_color);
 	glBindBuffer(GL_ARRAY_BUFFER, vbo_color);
+    // pass color
 	glBufferData(GL_ARRAY_BUFFER, color.size() * sizeof(GLfloat), &color[0], GL_STATIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -167,7 +169,7 @@ GLFWwindow* create_window_using_glfw(int width, int height)
 	glfwWindowHint(GLFW_FLOATING, GLFW_FALSE); // Windows is not always on top
 
 #ifdef __APPLE__
-	glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_FALSE); // To avoid HiDPI issues with pixel size on Mac
+	glfwWindowHint(GLFW_COCOA_RETINA_FRAMEBUFFER, GLFW_TRUE); // To avoid HiDPI issues with pixel size on Mac
 #endif 
 
 

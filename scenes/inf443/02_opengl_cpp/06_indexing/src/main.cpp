@@ -49,13 +49,22 @@ int main(int, char* argv[])
 		-0.5f, -0.5f, 0.0f,
 		 0.5f, -0.5f, 0.0f,
 		 0.5f,  0.5f, 0.0f,
-		-0.5f,  0.5f, 0.0f
+		-0.5f,  0.5f, 0.0f,
+         0.0f,  1.0f, 0.0f,
 	};
-
+    // manière plus efficace d'encodage
 	std::vector<GLuint> index = {
 		0, 1, 2,
-		0, 2, 3
+		0, 2, 3,
+        3, 2, 4
 	};
+    std::vector<GLfloat> color = {
+            1.0f, 0.0f, 0.0f, // vertex 0 - red
+            0.5f, 0.0f, 0.5f, // vertex 1 - purple
+            0.0f, 0.0f, 1.0f,  // vertex 2 - blue
+            0.0f, 0.5f, 0.5f, // vertex 3 - yellow
+            0.5f, 0.5f, 0.0, // vertex 4 - orange
+    };
 
 	// 2.2 Create VBO - Send data to GPU
 	// ******************************************* //
@@ -74,7 +83,13 @@ int main(int, char* argv[])
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, index.size() * sizeof(GLuint), &index[0], GL_STATIC_DRAW);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 
-
+    // Fill VBO for color
+    GLuint vbo_color = 0;
+    glGenBuffers(1, &vbo_color);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_color);
+    // pass color
+    glBufferData(GL_ARRAY_BUFFER, color.size() * sizeof(GLfloat), &color[0], GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 
 	// 2.3 Create VAO - Relation between VBO organization and input variables of shaders
@@ -91,11 +106,15 @@ int main(int, char* argv[])
 	glEnableVertexAttribArray(0);
 	// Define the memory model of the current VBO: here contiguous triplet of floating values (x y z) at index layout=0 in the shader
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+
+    // position at layout 1
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_color);
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
+
 	// As a good practice, disable VBO and VAO after their use
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
-
-
 
 
 	// ******************************** //
@@ -117,7 +136,7 @@ int main(int, char* argv[])
 		glUseProgram(shader);             // Activate shader program
 		glBindVertexArray(vao);           // Activate attributes for the drawing
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_index); // Bind index buffer
-		glDrawElements(GL_TRIANGLES, 2*3, GL_UNSIGNED_INT, nullptr); // Draw 6 vertices (2 triangles)
+		glDrawElements(GL_TRIANGLES, 3*3, GL_UNSIGNED_INT, nullptr); // Draw 9 vertices (3 triangles)
 
 		// Clean after drawing
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
