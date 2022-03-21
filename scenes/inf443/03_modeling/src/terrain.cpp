@@ -5,7 +5,7 @@
 using namespace cgp;
 
 // Evaluate 3D position of the terrain for any (u,v) \in [0,1]
-float evaluate_terrain_height(float x, float y)
+float evaluate_terrain_height_basic(float x, float y)
 {
     vec2 p_0 = { 0, 0 };
     float h_0 = 2.0f;
@@ -15,6 +15,21 @@ float evaluate_terrain_height(float x, float y)
 
     float z = h_0 * std::exp(-d * d);
 
+    return z;
+}
+
+float evaluate_terrain_height(float x, float y)
+{
+    vec2 p_i[4] = { {-10,-10}, {5,5}, {-3,4}, {6,4} };
+    float h_i[4] = {3.0f, -1.5f, 1.0f, 2.0f};
+    float sigma_i[4] = {10.0f, 3.0f, 4.0f, 4.0f};
+
+    float z = 0;
+    float di = 0;
+    for(int i = 0; i<4; i++){
+        di = norm(vec2(x, y) - p_i[i]) / sigma_i[i];
+        z += h_i[i] *5* std::exp(-di * di);
+    }
     return z;
 }
 

@@ -12,16 +12,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="attributs des sommets">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="TD2 complete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/shaders/triangle.frag.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/shaders/triangle.frag.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/shaders/triangle.vert.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/shaders/triangle.vert.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/src/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/05_vertex_attributes/src/main.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/shaders/triangle.frag.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/shaders/triangle.frag.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/shaders/triangle.vert.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/shaders/triangle.vert.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/02_opengl_cpp/06_indexing/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/tree.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/tree.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +79,8 @@
       <workItem from="1647283478857" duration="6706000" />
       <workItem from="1647336423373" duration="7414000" />
       <workItem from="1647464927836" duration="1477000" />
+      <workItem from="1647466411824" duration="24000" />
+      <workItem from="1647877855483" duration="4268000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -131,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647465018573</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="TD2 complete">
+      <created>1647466429936</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647466429936</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +162,8 @@
     <MESSAGE value="TD2 1st part" />
     <MESSAGE value="TD2 2nd part" />
     <MESSAGE value="attributs des sommets" />
-    <option name="LAST_COMMIT_MESSAGE" value="attributs des sommets" />
+    <MESSAGE value="TD2 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="TD2 complete" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -15,11 +15,16 @@ void scene_structure::initialize()
 	environment.camera.look_at({ 15.0f,6.0f,6.0f }, { 0,0,0 });
 
 	int N_terrain_samples = 100;
-	float terrain_length = 20;
+	float terrain_length = 30;
+
 	mesh const terrain_mesh = create_terrain_mesh(N_terrain_samples, terrain_length);
-	terrain.initialize(terrain_mesh, "terrain");
+	terrain.initialize(terrain_mesh, "terrain");  // cgp::mesh_drawable::initialize
 	terrain.shading.color = { 0.6f,0.85f,0.5f };
 	terrain.shading.phong.specular = 0.0f; // non-specular terrain material
+
+    mesh const tree_mesh = create_tree();
+    tree.initialize(tree_mesh, "tree");  // cgp::mesh_drawable::initialize
+    tree.shading.phong.specular = 0.0f; // non-specular terrain material
 
 }
 
@@ -36,8 +41,11 @@ void scene_structure::display()
 		draw(global_frame, environment);
 
 	draw(terrain, environment);
-	if (gui.display_wireframe)
-		draw_wireframe(terrain, environment);
+    draw(tree, environment);
+	if (gui.display_wireframe){
+        draw_wireframe(terrain, environment);
+        draw_wireframe(tree, environment);
+    }
 
 }
 

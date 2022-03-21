@@ -4,6 +4,7 @@
 
 
 float evaluate_terrain_height(float x, float y);
+float evaluate_terrain_height_basic(float x, float y);
 
 /** Compute a terrain mesh 
 	The (x,y) coordinates of the terrain are set in [-length/2, length/2].
