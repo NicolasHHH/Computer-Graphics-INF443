@@ -2,18 +2,14 @@
 
 using namespace cgp;
 
-
-mesh create_cylinder_mesh(float radius, float height)
-{
+mesh create_cylinder_mesh(float radius, float height){
     mesh m;
 
     int N = 9;
-    float cx = 0;
-    float cy = 0;
 
     for(int u=0; u<N; u++){
-        float x = std::cos(u*2*3.14/N)*radius + cx;
-        float y = std::sin(u*2*3.14/N)*radius + cy;
+        float x = std::cos(u*2*3.14/N)*radius ;
+        float y = std::sin(u*2*3.14/N)*radius ;
 
         m.position.push_back(vec3{x,y,0});
         m.position.push_back(vec3{x,y,height});
@@ -42,8 +38,8 @@ mesh create_cylinder_mesh(float radius, float height)
 
 mesh create_tree()
 {
-    float h = 6.0f; // trunk height
-    float r = 1.0f; // trunk radius
+    float h = 2.0f; // trunk height
+    float r = 0.3f; // trunk radius
 
     // Create a brown trunk
     mesh trunk = create_cylinder_mesh(r, h);

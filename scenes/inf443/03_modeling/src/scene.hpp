@@ -1,6 +1,7 @@
 #pragma once
 
 #include "cgp/cgp.hpp"
+#include <vector>
 
 // The element of the GUI that are not already stored in other structures
 struct gui_parameters {
@@ -25,6 +26,7 @@ struct scene_structure {
 	
 	cgp::mesh_drawable terrain;
     cgp::mesh_drawable tree;
+    std::vector<cgp::vec3> tree_positions;
 
 
 	// ****************************** //

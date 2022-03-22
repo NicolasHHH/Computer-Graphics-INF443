@@ -28,7 +28,7 @@ float evaluate_terrain_height(float x, float y)
     float di = 0;
     for(int i = 0; i<4; i++){
         di = norm(vec2(x, y) - p_i[i]) / sigma_i[i];
-        z += h_i[i] *5* std::exp(-di * di);
+        z += h_i[i] *2* std::exp(-di * di);
     }
     return z;
 }
@@ -80,5 +80,19 @@ mesh create_terrain_mesh(int N, float terrain_length)
 	terrain.fill_empty_field(); 
 
     return terrain;
+}
+
+std::vector<vec3> generate_positions_on_terrain(int N, float terrain_length){
+
+    std::vector<vec3> positions;
+    for(int i = 0; i<N; i++){
+        float x = rand_interval(-terrain_length,terrain_length);
+        float y = rand_interval(-terrain_length,terrain_length);
+        float z = evaluate_terrain_height(x,y);
+        // std::cout << "z"<<std::endl;
+        vec3 pi = {x,y,z};
+        positions.push_back(pi);
+    }
+    return positions;
 }
 

@@ -26,8 +26,9 @@ void scene_structure::initialize()
     tree.initialize(tree_mesh, "tree");  // cgp::mesh_drawable::initialize
     tree.shading.phong.specular = 0.0f; // non-specular terrain material
 
-}
+    tree_positions = generate_positions_on_terrain(20,10);
 
+}
 
 
 
@@ -41,7 +42,11 @@ void scene_structure::display()
 		draw(global_frame, environment);
 
 	draw(terrain, environment);
-    draw(tree, environment);
+
+    for(vec3 point : tree_positions){
+        tree.transform.translation = point;
+        draw(tree, environment);
+    }
 	if (gui.display_wireframe){
         draw_wireframe(terrain, environment);
         draw_wireframe(tree, environment);
