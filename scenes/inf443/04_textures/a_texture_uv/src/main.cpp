@@ -57,6 +57,8 @@ int main(int, char* argv[])
 		// Display the ImGUI interface (button, sliders, etc)
 		scene.display_gui();
 
+
+
 		// Call the display of the scene
 		scene.display();
 		

@@ -23,7 +23,10 @@ struct scene_structure {
 
 	gui_parameters gui;                       // Standard GUI element storage
 	
-	cgp::mesh_drawable shape;
+	//cgp::mesh_drawable shape;
+    cgp::mesh_drawable trunk;
+    cgp::mesh_drawable disc;
+    cgp::mesh_drawable disc2;
 
 
 	// ****************************** //
