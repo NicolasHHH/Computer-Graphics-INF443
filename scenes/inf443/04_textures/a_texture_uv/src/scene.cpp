@@ -20,7 +20,7 @@ void scene_structure::initialize()
 	// Create a quadrangle as a mesh
 	mesh quadrangle_mesh;
 	quadrangle_mesh.position = { {-1,-1,0}, { 1,-1,0}, { 1, 1,0}, {-1, 1,0} };
-	quadrangle_mesh.uv = { {0,2}, {2,2}, {2,0}, {0,0} }; // Associate Texture-Coordinates to the vertices of the quadrangle
+	quadrangle_mesh.uv = { {0,1}, {1,1}, {1,0}, {0,0} }; // Associate Texture-Coordinates to the vertices of the quadrangle
 	quadrangle_mesh.connectivity = { {0,1,2}, {0,2,3} };
 
 	quadrangle_mesh.fill_empty_field(); // (fill with some default values the other buffers (colors, normals) that we didn't filled before)
