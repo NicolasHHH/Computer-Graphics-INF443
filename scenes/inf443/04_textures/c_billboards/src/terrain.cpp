@@ -5,7 +5,7 @@ using namespace cgp;
 
 mesh create_terrain_mesh()
 {
-	int const terrain_sample = 180;
+	int const terrain_sample = 380;
 	mesh terrain = mesh_primitive_grid({-1,-1,0},{1,-1,0},{1,1,0},{-1,1,0},terrain_sample,terrain_sample);
 	return terrain;
 }
@@ -14,6 +14,9 @@ void update_terrain(mesh& terrain, mesh_drawable& terrain_visual, perlin_noise_p
 {
 	// Number of samples in each direction (assuming a square grid)
 	int const N = std::sqrt(terrain.position.size());
+    terrain.position.resize(N*N);
+    terrain.uv.resize(N*N);
+
 
 	// Recompute the new vertices
 	for (int ku = 0; ku < N; ++ku) {
@@ -24,6 +27,8 @@ void update_terrain(mesh& terrain, mesh_drawable& terrain_visual, perlin_noise_p
             const float v = kv/(N-1.0f);
 
 			int const idx = ku*N+kv;
+
+            terrain.uv[kv+N*ku] = {u*10,v*10};
 
 			// Compute the Perlin noise
 			float const noise = noise_perlin({u, v}, parameters.octave, parameters.persistency, parameters.frequency_gain);

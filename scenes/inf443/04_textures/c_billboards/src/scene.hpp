@@ -28,6 +28,8 @@ struct scene_structure {
 	cgp::mesh_drawable floor;
 	cgp::mesh_drawable quad_1;
 	cgp::mesh_drawable quad_2;
+    cgp::mesh_drawable terrain;
+    perlin_noise_parameters parameters;
 
 
 	// ****************************** //

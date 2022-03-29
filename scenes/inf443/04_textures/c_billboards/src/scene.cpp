@@ -1,4 +1,5 @@
 #include "scene.hpp"
+#include "terrain.hpp"
 
 
 using namespace cgp;
@@ -13,21 +14,24 @@ void scene_structure::initialize()
 	environment.camera.look_at({ 0.0f,2.0f,2.0f }, { 0,0,0 });
 
 
-	floor.initialize(mesh_primitive_quadrangle({ -1.5f,-1.5f,0.0f }, { 1.5f,-1.5f,0.0f }, { 1.5f,1.5f,0.0f }, { -1.5f,1.5f,0.0f }), "Floor");
-	floor.shading.color = { 0.75f, 0.8f, 0.5f };
+	//floor.initialize(mesh_primitive_quadrangle({ -1.5f,-1.5f,0.0f }, { 1.5f,-1.5f,0.0f }, { 1.5f,1.5f,0.0f }, { -1.5f,1.5f,0.0f }), "Floor");
+	//floor.shading.color = { 0.75f, 0.8f, 0.5f };
 
-	mesh quad_mesh = mesh_primitive_quadrangle({ -0.5f,0,0 }, { 0.5f,0,0 }, { 0.5f,0,1 }, { -0.5f,0,1 });
+
+	mesh quad_mesh = mesh_primitive_quadrangle({ 0.0f,0,0.0 }, { 0.1f,0,0.0 }, { 0.1f,0,0.2 }, { 0.0f,0,0.2 });
+
+    mesh terrain_mesh = create_terrain_mesh();
+    terrain.initialize(terrain_mesh,"terrain");
+    update_terrain(terrain_mesh,terrain,parameters);
 	quad_1.initialize(quad_mesh, "Quad 1");
-	quad_2.initialize(quad_mesh, "Quad 2");
 
+    terrain.texture = opengl_load_texture_image("assets/texture_grass.jpg");
 	quad_1.texture = opengl_load_texture_image("assets/grass.png");
-	quad_2.texture = opengl_load_texture_image("assets/window_red.png");
-
 	quad_1.shading.phong = { 0.4f, 0.6f,0,1 };
-	quad_2.shading.phong = { 0.4f, 0.6f,0,1 };
-
-	quad_1.transform.translation = { 0,-0.5f,0 };
-	quad_2.transform.translation = { 0,+0.5f,0 };
+    int const N = std::sqrt(terrain_mesh.position.size());
+    float x = 0.0;
+    float y = 0.5f ;
+	quad_1.transform.translation = { x,y,terrain_mesh.position[y*N*N+x*N].z };
 }
 
 
@@ -39,11 +43,12 @@ void scene_structure::display()
 	if (gui.display_frame)
 		draw(global_frame, environment);
 
-	draw(floor, environment);
+	draw(terrain, environment);
+    //draw(quad_1, environment);
 
 	if (gui.display_wireframe) {
 		draw_wireframe(quad_1, environment);
-		draw_wireframe(quad_2, environment);
+		draw_wireframe(terrain, environment);
 	}
 
 
@@ -58,6 +63,8 @@ void scene_structure::display_semiTransparent()
 	// Enable use of alpha component as color blending for transparent elements
 	//  alpha = current_color.alpha
 	//  new color = previous_color * alpha + current_color * (1-alpha)
+
+    // mode blending
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -74,8 +81,9 @@ void scene_structure::display_semiTransparent()
 	rotation_transform R = rotation_transform::between_vector({ 1,0,0 }, { 0,1,0 }, right, front);
 	quad_1.transform.rotation = R;
 
-
-	// Sort transparent shapes by depth to camera
+    draw(quad_1, environment);
+    /*
+    // Sort transparent shapes by depth to camera
 	//   This step can be skipped, but it will be associated to visual artifacts
 
 	// Transform matrix (the same matrix which is applied in the vertices in the shader: T = Projection x View)
@@ -86,16 +94,16 @@ void scene_structure::display_semiTransparent()
 	// Depth to camera
 	float z1 = p1.z / p1.w;
 	float z2 = p2.z / p2.w;
-
 	// Display the quads relative to their depth
 	if (z1 <= z2) {
-		draw(quad_2, environment);
+		//draw(terrain, environment);
 		draw(quad_1, environment);
 	}
 	else {
 		draw(quad_1, environment);
-		draw(quad_2, environment);
+		//draw(terrain, environment);
 	}
+    */
 
 
 
