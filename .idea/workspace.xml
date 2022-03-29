@@ -12,13 +12,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="Debug makefiles and cmakelists of 04 05 06">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="trunk texture">
+      <change afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/terrain.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/terrain.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/models_textures.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/models_textures.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/models_textures.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/models_textures.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/scene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/scene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src/scene.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/pgm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/scene.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/03_modeling/src/terrain.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +56,18 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -81,7 +90,8 @@
       <workItem from="1647466411824" duration="24000" />
       <workItem from="1647877855483" duration="4400000" />
       <workItem from="1647940387357" duration="2395000" />
-      <workItem from="1648479353607" duration="4315000" />
+      <workItem from="1648479353607" duration="4351000" />
+      <workItem from="1648543272601" duration="1971000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -160,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648479451421</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="trunk texture">
+      <created>1648483703750</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648483703750</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +205,8 @@
     <MESSAGE value="TD3 trunk and leaves&#10;positioning to be updated" />
     <MESSAGE value="TD3 complete" />
     <MESSAGE value="Debug makefiles and cmakelists of 04 05 06" />
-    <option name="LAST_COMMIT_MESSAGE" value="Debug makefiles and cmakelists of 04 05 06" />
+    <MESSAGE value="trunk texture" />
+    <option name="LAST_COMMIT_MESSAGE" value="trunk texture" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

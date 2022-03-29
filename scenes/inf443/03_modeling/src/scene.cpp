@@ -14,13 +14,17 @@ void scene_structure::initialize()
 	environment.camera.axis = camera_spherical_coordinates_axis::z;
 	environment.camera.look_at({ 15.0f,6.0f,6.0f }, { 0,0,0 });
 
-	int N_terrain_samples = 100;
-	float terrain_length = 30;
+	int N_terrain_samples = 300;
+	float terrain_length = 50;
 
 	mesh const terrain_mesh = create_terrain_mesh(N_terrain_samples, terrain_length);
 	terrain.initialize(terrain_mesh, "terrain");  // cgp::mesh_drawable::initialize
 	terrain.shading.color = { 0.6f,0.85f,0.5f };
 	terrain.shading.phong.specular = 0.0f; // non-specular terrain material
+
+    // texture
+    GLuint const texture_image_id = opengl_load_texture_image("../04_textures/a_texture_uv/assets/texture_grass.jpg",GL_REPEAT,GL_REPEAT);
+    terrain.texture = texture_image_id;
 
     mesh const tree_mesh = create_tree();
     tree.initialize(tree_mesh, "tree");  // cgp::mesh_drawable::initialize
