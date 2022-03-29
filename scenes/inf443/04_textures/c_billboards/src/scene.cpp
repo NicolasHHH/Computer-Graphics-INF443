@@ -30,7 +30,7 @@ void scene_structure::initialize()
 	quad_1.shading.phong = { 0.4f, 0.6f,0,1 };
     int const N = std::sqrt(terrain_mesh.position.size());
     float x = 0.0;
-    float y = 0.5f ;
+    float y = 0.5f;
 	quad_1.transform.translation = { x,y,terrain_mesh.position[y*N*N+x*N].z };
 }
 

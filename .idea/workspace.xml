@@ -13,15 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="terrain texture + perlin noise">
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/assets/texture_grass.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/main.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/main.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/scene.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/terrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/terrain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/terrain.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/src/terrain.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +84,7 @@
       <workItem from="1647940387357" duration="2395000" />
       <workItem from="1648479353607" duration="4351000" />
       <workItem from="1648543272601" duration="4664000" />
+      <workItem from="1648547949880" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -184,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648545386387</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="terrain texture + perlin noise">
+      <created>1648547973863</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648547973863</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
