@@ -3,19 +3,6 @@
 
 using namespace cgp;
 
-/** Compute the linear interpolation p(t) between p1 at time t1 and p2 at time t2*/
-vec3 linear_interpolation(float t, float t1, float t2, vec3 const& p1, vec3 const& p2);
-
-/** Compute the cardinal spline interpolation p(t) with the polygon [p0,p1,p2,p3] at time [t0,t1,t2,t3]
-*  - Assume t \in [t1,t2] */
-vec3 cardinal_spline_interpolation(float t, float t0, float t1, float t2, float t3, vec3 const& p0, vec3 const& p1, vec3 const& p2, vec3 const& p3, float K);
-
-/** Find the index k such that intervals[k] < t < intervals[k+1] 
-* - Assume intervals is a sorted array of N time values
-* - Assume t \in [ intervals[0], intervals[N-1] [       */
-int find_index_of_interval(float t, buffer<float> const& intervals);
-
-
 vec3 interpolation(float t, buffer<vec3> const& key_positions, buffer<float> const& key_times)
 {
     // Find idx such that key_times[idx] < t < key_times[idx+1]
@@ -23,14 +10,27 @@ vec3 interpolation(float t, buffer<vec3> const& key_positions, buffer<float> con
 
     // Get parameters (time and position) used to compute the linear interpolation
     //   (You will need to get more parameters for the spline interpolation)
-    float t1 = key_times[idx  ]; // = t_i
-    float t2 = key_times[idx+1]; // = t_{i+1}
+    float t1 = key_times[idx-1]; // = t_{i-1}
+    float t2 = key_times[idx]; // = t_{i}
+    float t3 = key_times[idx+1]; // = t_{i+1}
+    float t4 = key_times[idx+2]; // = t_{i+2}
 
-    vec3 const& p1 = key_positions[idx  ]; // = p_i
-    vec3 const& p2 = key_positions[idx+1]; // = p_{i+1}
+    vec3 const& p1 = key_positions[idx-1]; // = p_{i-1}
+    vec3 const& p2 = key_positions[idx]; // = p_{i}
+    vec3 const& p3 = key_positions[idx+1]; // = p_{i+1}
+    vec3 const& p4 = key_positions[idx+2]; // = p_{i+2}
 	
     // Call the interpolation
-	vec3 p = linear_interpolation(t, t1,t2, p1,p2);
+	// vec3 p = linear_interpolation(t, t1,t2, p1,p2);
+
+    // tension :
+    //K = 0: Courbe la plus tendue: chaque morceau est un segment de droite
+    //K=0.5: Tension dite naturelle, également appelée spline de Catmull-Rom
+    //K>0.5: Tangente de plus en plus marquée aux points de controles.
+    // La trajectoire s'éloigne du polygone de controle,
+    // et des points d'inflexions de la courbe apparaissent entre les points de controles.
+    float K = 0.4;
+    vec3 p = cardinal_spline_interpolation(t,t1,t2,t3,t4,p1,p2,p3,p4,K);
 
     return p;
 }
@@ -61,8 +61,15 @@ vec3 linear_interpolation(float t, float t1, float t2, vec3 const& p1, vec3 cons
 vec3 cardinal_spline_interpolation(float t, float t0, float t1, float t2, float t3, vec3 const& p0, vec3 const& p1, vec3 const& p2, vec3 const& p3, float K)
 {
     // To do: fill the function to compute p(t) as a cardinal spline interpolation
-    vec3 const p = {0,0,0};
-
+    vec3 p = {0,0,0};
+    float s = (t-t1)/(t2-t1);
+    float di = 0;
+    float di_ = 0;
+    for(int i = 0;i<3;i++){
+        di = 2*K*(p2[i]-p0[i])/(t2-t0);
+        di_ = 2*K*(p3[i]-p1[i])/(t3-t1);
+        p[i] = (2*s*s*s-3*s*s+1)*p1[i] + (s*s*s-2*s*s+s)*di + (-2*s*s*s+3*s*s)*p2[i] +(s*s*s-s*s)*di_;
+    }
     return p;
 }
 

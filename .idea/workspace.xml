@@ -12,13 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="solution terrain grass">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="comments on the solution">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/solution_terrain/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/solution_terrain/pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/scene.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/scene.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/scene.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/tree.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/tree.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/tree.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/solution_terrain/src/tree.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/src/interpolation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/src/interpolation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/src/interpolation.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/src/interpolation.hpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <workItem from="1648479353607" duration="4351000" />
       <workItem from="1648543272601" duration="4664000" />
       <workItem from="1648547949880" duration="72000" />
-      <workItem from="1649083930694" duration="2146000" />
+      <workItem from="1649083930694" duration="4781000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -207,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649084378880</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="comments on the solution">
+      <created>1649086093673</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1649086093673</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +243,8 @@
     <MESSAGE value="terrain texture + perlin noise" />
     <MESSAGE value="terrain with standing grass" />
     <MESSAGE value="solution terrain grass" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution terrain grass" />
+    <MESSAGE value="comments on the solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments on the solution" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
