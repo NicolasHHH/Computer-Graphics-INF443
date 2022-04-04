@@ -14,7 +14,7 @@ mesh create_cylinder_mesh(float radius, float height)
     // Geometry
     for(int k=0; k<N; ++k)
     {
-        float u = k/float(N);
+        float u = k/float(N); // [0,1]
         vec3 p = {radius*std::cos(2*3.14f*u), radius*std::sin(2*3.14f*u), 0.0f};
         m.position.push_back( p );
         m.position.push_back( p+vec3(0,0,height) );

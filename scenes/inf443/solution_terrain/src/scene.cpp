@@ -34,7 +34,7 @@ void scene_structure::initialize()
 	// Initialize the grass of billboards
 	billboard.initialize(mesh_primitive_quadrangle({ -0.5f,0,0 }, { 0.5f,0,0 }, { 0.5f,0,1 }, { -0.5f,0,1 }), "Quad");
 	billboard.texture = opengl_load_texture_image("assets/grass.png");
-	billboard.shading.phong = { 0.4f, 0.6f,0,1 };
+	billboard.shading.phong = { 0.4f, 0.6f,0,0.2 };
 	billboard.transform.scaling = 0.6f;
 	billboard_position = generate_positions_on_terrain(75, terrain_length);
 }
@@ -96,11 +96,18 @@ void scene_structure::display_billboard()
 	//  the right-direction of the billboard is turned to match the right-direction of the camera => R*{1,0,0} = camera_right
 	//  but the billboard remains oriented upward in the z direction => R*{0,0,1} = {0,0,1}
 	vec3 camera_right = environment.camera.right();
+
+
 	rotation_transform R = rotation_transform::between_vector({ 1,0,0 }, { 0,0,1 }, camera_right, { 0,0,1 });
 	billboard.transform.rotation = R;
 
+
+    // hty : apply texture to transparent background to represent complex forms
+    // at first, all opaque objects are shown in the classic way
+    // we enable COLOR BLENDING before the display of transparent objects
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	glDepthMask(false);
 
 	vec3 const offset = { 0,0,0.02f };
