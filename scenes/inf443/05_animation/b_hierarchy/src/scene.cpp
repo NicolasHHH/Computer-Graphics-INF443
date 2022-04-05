@@ -15,6 +15,17 @@ void scene_structure::initialize()
 
 	// Create the hierarchy
 	// ************************************ //
+    // struct hierarchy_mesh_drawable node
+    //     mesh_drawable node.drawable
+    //     string        node.name_parent
+    //     tf            node.transform
+    //     tf            node.global_transform
+    //     void add(mesh_drawable, name_parent,affine_rts);
+    //     root = "global_frame"
+    //
+    //     hierarchy[nomElement].transformation.translation/rotation =
+    //     hierarchy.update_local_to_global_coordinates()
+
 
 	// Initialize the temporary mesh_drawable that will be inserted in the hierarchy
 	mesh_drawable cube_base;
@@ -25,7 +36,7 @@ void scene_structure::initialize()
 	mesh_drawable cylinder1_son;
 
 	// Create the geometry of the meshes
-	//   Note: this geometry must be set in their local coordinates with respect to their position in the hierarchy (and with respect to their animation)
+	// Note: this geometry must be set in their local coordinates with respect to their position in the hierarchy (and with respect to their animation)
 	cube_base.initialize(mesh_primitive_cube(), "Cube base"); cube_base.transform.scaling = 0.15f;
 	cylinder_base.initialize(mesh_primitive_cylinder(0.05f, { 0,0,0 }, { 0,0,0.5f }), "Cylinder base");
 	sphere_junction.initialize(mesh_primitive_sphere(0.1f), "Sphere junction");
