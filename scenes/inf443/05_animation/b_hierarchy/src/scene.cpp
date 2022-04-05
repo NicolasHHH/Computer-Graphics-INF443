@@ -91,7 +91,9 @@ void scene_structure::display()
 	timer.update();
 
 	// Apply transformation to some elements of the hierarchy
-	hierarchy["Cylinder1"].transform.rotation = rotation_transform::from_axis_angle({ 0,0,1 }, timer.t);
+    hierarchy["Cube base"].transform.rotation = rotation_transform::from_axis_angle({ 0,1,0 }, std::cos(timer.t));
+
+	hierarchy["Cylinder1"].transform.rotation = rotation_transform::from_axis_angle({ 0,0,1 }, 2*timer.t);
 	hierarchy["Cube1"].transform.rotation = rotation_transform::from_axis_angle({ 1,0,0 }, -3 * timer.t);
 
     hierarchy["Cylinder2"].transform.rotation = rotation_transform::from_axis_angle({ 0,0,1 }, -3 * timer.t);

@@ -12,7 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="hierarchy animation structure">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="add two green rotating cylinder at the end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" afterDir="false" />
@@ -92,7 +92,7 @@
       <workItem from="1648543272601" duration="4664000" />
       <workItem from="1648547949880" duration="72000" />
       <workItem from="1649083930694" duration="4914000" />
-      <workItem from="1649146632619" duration="1638000" />
+      <workItem from="1649146632619" duration="1768000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -227,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649147557247</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add two green rotating cylinder at the end">
+      <created>1649148317227</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1649148317227</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +269,8 @@
     <MESSAGE value="comments on the solution" />
     <MESSAGE value="cardinal spline interpolation" />
     <MESSAGE value="hierarchy animation structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="hierarchy animation structure" />
+    <MESSAGE value="add two green rotating cylinder at the end" />
+    <option name="LAST_COMMIT_MESSAGE" value="add two green rotating cylinder at the end" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
