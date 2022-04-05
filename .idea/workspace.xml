@@ -12,10 +12,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="cardinal spline interpolation">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="hierarchy animation structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/imgui.ini" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/a_interpolation_position/imgui.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.o" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.o" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +92,7 @@
       <workItem from="1648543272601" duration="4664000" />
       <workItem from="1648547949880" duration="72000" />
       <workItem from="1649083930694" duration="4914000" />
-      <workItem from="1649146632619" duration="909000" />
+      <workItem from="1649146632619" duration="1638000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649088840706</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="hierarchy animation structure">
+      <created>1649147557247</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1649147557247</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +261,8 @@
     <MESSAGE value="solution terrain grass" />
     <MESSAGE value="comments on the solution" />
     <MESSAGE value="cardinal spline interpolation" />
-    <option name="LAST_COMMIT_MESSAGE" value="cardinal spline interpolation" />
+    <MESSAGE value="hierarchy animation structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="hierarchy animation structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
