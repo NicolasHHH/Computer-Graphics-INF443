@@ -40,7 +40,8 @@ void scene_structure::initialize()
 
 	// Create the geometry of the meshes
 	// Note: this geometry must be set in their local coordinates with respect to their position in the hierarchy (and with respect to their animation)
-	cube_base.initialize(mesh_primitive_cube(), "Cube base"); cube_base.transform.scaling = 0.15f;
+	cube_base.initialize(mesh_primitive_cube(), "Cube base");
+    cube_base.transform.scaling = 0.15f;
 	cylinder_base.initialize(mesh_primitive_cylinder(0.05f, { 0,0,0 }, { 0,0,0.5f }), "Cylinder base");
 	sphere_junction.initialize(mesh_primitive_sphere(0.1f), "Sphere junction");
 	cylinder1.initialize(mesh_primitive_cylinder(0.05f, { 0,0,0 }, { 1.0f,0,0 }), "Cylinder1");
