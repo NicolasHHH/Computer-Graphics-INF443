@@ -33,6 +33,9 @@ struct scene_structure {
 	cgp::mesh_drawable particle_sphere;
 	cgp::segments_drawable segment;
 
+    cgp::mesh_drawable particle_sphere2;
+    cgp::segments_drawable segment2;
+
 	// Timer used for the animation
 	cgp::timer_basic timer;
 
@@ -41,6 +44,9 @@ struct scene_structure {
 	cgp::vec3 pB; // position of particle B
 	cgp::vec3 vA; // velocity of particle A
 	cgp::vec3 vB; // velocity of particle B
+
+    cgp::vec3 pC; // position of particle C
+    cgp::vec3 vC; // velocity of particle C
 	float L0; // Rest-length of spring
 
 
