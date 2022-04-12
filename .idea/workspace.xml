@@ -12,8 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="Flying bird without orientation">
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="workspace xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/06_simulation/a_spheres/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/06_simulation/a_spheres/src/scene.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +94,7 @@
       <workItem from="1648547949880" duration="72000" />
       <workItem from="1649083930694" duration="4914000" />
       <workItem from="1649146632619" duration="7199000" />
+      <workItem from="1649752163903" duration="1677000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -255,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649153840664</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="workspace xml">
+      <created>1649752177670</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1649752177670</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +302,8 @@
     <MESSAGE value="add two green rotating cylinder at the end" />
     <MESSAGE value="add oscillation to the base cube" />
     <MESSAGE value="Flying bird without orientation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flying bird without orientation" />
+    <MESSAGE value="workspace xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
