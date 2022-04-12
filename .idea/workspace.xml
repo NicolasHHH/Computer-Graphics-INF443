@@ -12,40 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="add oscillation to the base cube">
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/CMakeSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/assets/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/assets/texture_grass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/imgui.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/pgm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/shaders/mesh/frag.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/shaders/mesh/vert.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/shaders/single_color/frag.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/shaders/single_color/vert.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/interpolation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/interpolation.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/key_positions_structure.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/key_positions_structure.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/main.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/main.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/scene.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/scene.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/scene.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/scene.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/terrain.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/terrain.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/terrain.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/terrain.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/tree.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/tree.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/tree.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/inf443/Flying_bird/src/tree.o" afterDir="false" />
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="Flying bird without orientation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src/scene.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +92,7 @@
       <workItem from="1648543272601" duration="4664000" />
       <workItem from="1648547949880" duration="72000" />
       <workItem from="1649083930694" duration="4914000" />
-      <workItem from="1649146632619" duration="7050000" />
+      <workItem from="1649146632619" duration="7199000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -273,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1649148489295</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Flying bird without orientation">
+      <created>1649153831367</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1649153831367</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Flying bird without orientation">
+      <created>1649153840664</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1649153840664</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +292,8 @@
     <MESSAGE value="hierarchy animation structure" />
     <MESSAGE value="add two green rotating cylinder at the end" />
     <MESSAGE value="add oscillation to the base cube" />
-    <option name="LAST_COMMIT_MESSAGE" value="add oscillation to the base cube" />
+    <MESSAGE value="Flying bird without orientation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flying bird without orientation" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
