@@ -12,41 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="multiple springs">
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/ClothFS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/ClothVS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/RigidFS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/RigidVS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/SpringFS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Shaders/SpringVS.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Textures/tex1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Cloth.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Display.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Points.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Program.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Rigid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Spring.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/Vectors.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/ClothSimulation/src/stb_image.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenes/Import_test/import_from_scan/assets/cxy.obj" afterDir="false" />
+    <list default="true" id="d96e7fb7-6c4c-472d-bf22-c026c0128bd6" name="变更" comment="workspace xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/CMakeSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/ClothSimulation/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/assets/mountain.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/assets/mountain.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/pic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/shaders/mesh/frag.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/shaders/mesh/vert.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/shaders/single_color/frag.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/shaders/single_color/vert.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/src/environment_camera_head/environment_camera_head.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/src/environment_camera_head/environment_camera_head.hpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/src/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/src/scene.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/examples/02_camera/01_camera_fly_mode/src/scene.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenes/inf443/06_simulation/a_spheres/src/scene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/inf443/06_simulation/a_spheres/src/scene.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +48,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/scenes/examples/02_camera" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -90,16 +58,12 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scenes/examples/02_camera" />
-      <recent name="$PROJECT_DIR$/scenes/Import_test/import_from_scan/assets" />
-      <recent name="$PROJECT_DIR$/scenes/Import_test" />
-      <recent name="$PROJECT_DIR$/scenes" />
-      <recent name="$PROJECT_DIR$/scenes/ClothSimulation" />
+      <recent name="$PROJECT_DIR$/scenes/inf443/05_animation/b_hierarchy/src" />
+      <recent name="$PROJECT_DIR$/scenes/inf443" />
+      <recent name="$PROJECT_DIR$/scenes/inf443/04_textures/c_billboards/assets" />
+      <recent name="$PROJECT_DIR$/scenes/inf443/04_textures/a_texture_uv/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/scenes/Import_test/import_from_scan/assets" />
-      <recent name="$PROJECT_DIR$/scenes/ClothSimulation/src" />
-      <recent name="$PROJECT_DIR$/scenes/ClothSimulation" />
       <recent name="$PROJECT_DIR$/scenes/inf443/Flying_bird/src" />
       <recent name="$PROJECT_DIR$/scenes/inf443" />
     </key>
@@ -130,8 +94,7 @@
       <workItem from="1648547949880" duration="72000" />
       <workItem from="1649083930694" duration="4914000" />
       <workItem from="1649146632619" duration="7199000" />
-      <workItem from="1649752163903" duration="5073000" />
-      <workItem from="1649888210054" duration="7685000" />
+      <workItem from="1649752163903" duration="1677000" />
     </task>
     <task id="LOCAL-00001" summary="first change">
       <created>1646694494508</created>
@@ -301,21 +264,7 @@
       <option name="project" value="LOCAL" />
       <updated>1649752177670</updated>
     </task>
-    <task id="LOCAL-00025" summary="bounding particles">
-      <created>1649753904418</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1649753904418</updated>
-    </task>
-    <task id="LOCAL-00026" summary="multiple springs">
-      <created>1649776187684</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1649776187684</updated>
-    </task>
-    <option name="localTasksCounter" value="27" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,9 +303,7 @@
     <MESSAGE value="add oscillation to the base cube" />
     <MESSAGE value="Flying bird without orientation" />
     <MESSAGE value="workspace xml" />
-    <MESSAGE value="bounding particles" />
-    <MESSAGE value="multiple springs" />
-    <option name="LAST_COMMIT_MESSAGE" value="multiple springs" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
